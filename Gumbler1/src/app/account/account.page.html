@@ -10,8 +10,8 @@
 <ion-content [fullscreen]="true">
 
   <div class="roomList">
-    <ion-textarea #nameRef="ngModel" ngModel maxlength="15" id="editNick" [autoGrow]="true" class="textArea btnWrapper" label="Nickname (Click to change)" 
-    labelPlacement="stacked" fill="outline" placeholder="{{USERNAME}}"></ion-textarea>
+    <p>Nickname (Click to change)</p>
+    <ion-textarea #nameRef="ngModel" ngModel maxlength="15" id="editNick" [autoGrow]="true" class="textArea btnWrapper" placeholder="{{USERNAME}}"></ion-textarea>
     <ion-item>
       <ion-label><ion-icon class="blueC" name="logo-bitcoin"></ion-icon> Bank: {{bank}}gp</ion-label>
     </ion-item>
