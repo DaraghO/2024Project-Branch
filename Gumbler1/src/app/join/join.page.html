@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button slot="start"></ion-back-button>
+      <ion-title>Available Rooms</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-content>
+    <div class="roomList">
+      <ion-item button (click)="joinRoom(0)">
+        <ion-label>{{betrooms[0].room}}: <ion-icon class="blueC" name="person"></ion-icon>{{betrooms[0].max}}</ion-label>
+      </ion-item>
+      <ion-item button (click)="joinRoom(1)">
+        <ion-label>{{betrooms[1].room}}:  <ion-icon class="blueC" name="person"></ion-icon>{{betrooms[1].max}}</ion-label>
+      </ion-item>
+      <ion-item button (click)="joinRoom(2)">
+        <ion-label>{{betrooms[2].room}}:  <ion-icon class="blueC" name="person"></ion-icon>{{betrooms[2].max}}</ion-label>
+      </ion-item>
+      <ion-item button (click)="joinRoom(3)">
+        <ion-label>{{betrooms[3].room}}:  <ion-icon class="blueC" name="person"></ion-icon>{{betrooms[3].max}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-content>
+
+</ion-content>

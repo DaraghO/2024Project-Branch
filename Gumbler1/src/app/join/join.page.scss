@@ -1,0 +1,33 @@
+ion-title {
+    --color: #000;
+    background-color: #119dff;
+  }
+  ion-toolbar {
+    width: auto;
+    height: auto;
+    border-radius: 9px;
+    --background: #0f8ae2;
+  }
+  
+  ion-content{
+    --background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #060846);
+  }
+  
+  ion-back-button{
+    --color: #000;
+  }
+
+  .roomList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 20vh;
+  }
+  
+  .roomList ion-item {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 50px;
+  }

@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true">
+  <div class="goldWrapper">
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+    <div><span class="gold">Gp</span></div>
+  </div>
+
+  <ion-header collapse="condense">
+
+    <ion-toolbar>
+      <ion-title ><ion-icon name="wallet"></ion-icon>Gumbler</ion-title>
+    </ion-toolbar>
+
+    <div id="userStats">
+      <ul>
+        <li>
+          <ion-chip>
+            <ion-avatar>
+              <img alt="User Icon" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label class="username">{{USERNAME}}</ion-label> 
+          </ion-chip>
+        </li>
+        <li>
+          <ion-chip>  
+            <ion-label class="bank">Bank: {{bank}}gp</ion-label> 
+          </ion-chip>
+        </li>
+      </ul>
+    </div>
+
+  </ion-header>
+
+  <div id="container">
+    <ul>
+      <li>
+        <div class="btnWrapper">
+          <ion-button (click)="toHostPage()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="create"></ion-icon> Host
+          </ion-button>
+        </div>
+      </li>
+      <li>
+        <div class="btnWrapper">
+          <ion-button (click)="toJoinPage()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="search-circle"></ion-icon> Join 
+          </ion-button>
+        </div>
+      </li>
+      <li>
+        <div class="btnWrapper">
+          <ion-button (click)="toAccountPage()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="person"></ion-icon> Account 
+          </ion-button>
+        </div>
+      </li>
+      <li>
+        <div class="btnWrapper">
+
+          <div id="logout" class="ion-activatable ripple-parent rounded-rectangle">
+            Sign Out  <ion-icon id="signOutC" name="enter"></ion-icon>
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-action-sheet trigger="logout" header="Are you sure?" [buttons]="logoutPopupt"></ion-action-sheet>
+          </div>
+          
+          <!-- <ion-button (click)="logoutPopup()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="enter"></ion-icon> Sign Out 
+          </ion-button> -->
+
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,74 @@
+ion-title {
+  --color: #000;
+  background-color: #119dff;
+}
+ion-toolbar {
+  width: auto;
+  height: auto;
+  border-radius: 9px;
+  --background: #0f8ae2;
+}
+
+ion-content{
+  --background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #060846);
+}
+
+ion-back-button{
+  --color: #000;
+}
+
+.roomList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 10vh;
+}
+
+.roomList ion-item {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 50px;
+}
+
+
+
+  #container a {
+    text-decoration: none;
+  }
+  
+  #container ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+  }
+  .textArea{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#d6d8f7;
+
+    padding: 0 10vw;
+    margin-top: 5vh;
+  }
+
+ .btnWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  margin: 0 auto;
+
+}
+
+#editNick {
+  width: 90vw;
+  height: 50px;
+  border-radius: 200px;
+}

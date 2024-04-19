@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button slot="start"></ion-back-button>
+      <ion-title>Account Details</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="roomList">
+    <ion-textarea #nameRef="ngModel" ngModel maxlength="15" id="editNick" [autoGrow]="true" class="textArea btnWrapper" label="Nickname (Click to change)" 
+    labelPlacement="stacked" fill="outline" placeholder="{{USERNAME}}"></ion-textarea>
+    <ion-item>
+      <ion-label><ion-icon class="blueC" name="logo-bitcoin"></ion-icon> Bank: {{bank}}gp</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon class="blueC" name="trending-up"></ion-icon> Wins: {{win}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon class="blueC" name="trending-down"></ion-icon> Losses: {{loss}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon class="blueC" name="stats-chart"></ion-icon> Total bets: {{total}}</ion-label>
+    </ion-item>
+  </div>
+  <div id="container">
+    <ul>
+      <li>
+        <div class="btnWrapper">
+          <ion-button (click)="UpdateNick(nameRef.value)" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="wifi"></ion-icon> Update Nickname
+          </ion-button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>

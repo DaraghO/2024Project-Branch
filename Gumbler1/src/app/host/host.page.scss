@@ -1,0 +1,132 @@
+ion-title {
+    --color: #000;
+    background-color: #119dff;
+  }
+  ion-toolbar {
+    width: auto;
+    height: auto;
+    border-radius: 9px;
+    --background: #0f8ae2;
+  }
+  
+  ion-content{
+    --background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #060846);
+  }
+  
+  ion-back-button{
+    --color: #000;
+  }
+  #container a {
+    text-decoration: none;
+  }
+  
+  #container ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+  }
+  .textArea{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color:#d6d8f7;
+
+    padding: 0 10vw;
+    margin-top: 5vh;
+  }
+
+ .btnWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 5%;
+
+}
+ #roomName {
+  width: 90vw;
+  height: 50px;
+  border-radius: 200px;
+}
+
+#description {
+  width: 90vw;
+  height: 20vh;
+  border-radius: 30px;
+}
+
+.options {
+  margin-top: 5%;
+  text-align: center;
+  border-radius: 30px;
+  
+}
+
+.rounded-rectangle {
+  font-size: large;
+  font-weight: bolder;
+  width: 250px;
+  height: 55px;
+  border-radius: 9px;
+
+}
+
+#userStats{
+  width: 100vw;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+}
+
+#userStats ul{
+  display: flex;
+  gap: 30vw;
+}
+
+#userStats li{
+  list-style-type: none;
+  display: inline;
+  padding: 0; 
+  margin: 0; 
+}
+
+
+.textarea-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+}
+
+.gap {
+  width: 20px;
+}
+
+ion-textarea {
+  flex: 1;
+  border-radius: 30px;
+
+  background-color: #d6d8f7;
+}
+
+#entrants{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+  margin: 10vw;
+  border-radius: 30px;
+}
+
+#enLabel{
+  font-weight: bold;
+
+}

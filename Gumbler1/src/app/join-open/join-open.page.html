@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button slot="start"></ion-back-button>
+      <ion-title>{{room}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div class="container">
+  <ion-label class="textArea btnWrapper" id="description" >{{desc}}</ion-label>
+  <div class="options textarea-container">
+    <ion-button expand="block" (click)="optionSelected(1)" [class.selected]="highlighted1">{{op1}}</ion-button>
+    <div class="gap"></div>
+    <ion-button expand="block"  (click)="optionSelected(2)" [class.selected]="highlighted2">{{op2}}</ion-button>
+  </div>
+</div>
+
+<div id="userStats">
+  <ul>
+    <li>
+      <ion-chip>
+        <ion-avatar>
+          <img alt="User Icon" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="username">{{USERNAME}}</ion-label> 
+      </ion-chip>
+    </li>
+    <li>
+      <ion-chip>  
+        <ion-label class="bank">Bank: {{bank}}gp</ion-label> 
+      </ion-chip>
+    </li>
+  </ul>
+</div>
+
+<div class="betContainer" id="container">
+  <ion-input type = number [(ngModel)]="betAmount" maxlelength="6" labelPlacement="stacked" label="Enter bet amount"></ion-input>
+</div>
+
+<div id="container">
+  <ul>
+    <li>
+      <div class="btnWrapper">
+        <ion-button (click)="SubmitBet()" class="ion-activatable rounded-rectangle">
+          <ion-icon class="blueC" name="create"></ion-icon> Bet!
+        </ion-button>
+        <!-- <ion-button (click)="testmodal()" class="ion-activatable rounded-rectangle">
+          <ion-icon class="blueC" name="create"></ion-icon> test
+        </ion-button> -->
+        <!-- Test button used to check styling of the results screen -->
+      </div>
+    </li>
+  </ul>
+</div>
+
+<ion-modal  [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Results!</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="roomList">
+        <h3>{{correct}}</h3>
+        <ion-item *ngFor="let results of resultsMsg">
+          <ion-label>{{results}} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label id="yourBet">{{USERNAME}}{{userResult}}gp</ion-label>
+        </ion-item>
+        <ion-button (click)="toHome()">Close window</ion-button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+</ion-content>

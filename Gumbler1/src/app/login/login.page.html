@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"><ion-icon name="wallet"></ion-icon>Gumbler</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div >
+    <div id="x">
+      <div class="form">
+        <form #login="ngForm" (ngSubmit)="sub(login)">
+
+          <ion-input #nameRef="ngModel" required ngModel name="em" class="ion-activatable rounded-rectangle form-control" type="email"  placeholder="Email" errorText="Invalid email" email ></ion-input><br>
+          <ion-input #passRef="ngModel"  required ngModel name="pa"class="ion-activatable rounded-rectangle form-control" type="password" placeholder="Password"></ion-input><br>
+          <ion-button (click)="SubmitDetail(nameRef.value, passRef.value, login)" type="submit" id="click-trigger">Login / SignUp <ion-icon name="log-in"></ion-icon></ion-button>
+        </form>
+
+      </div><br>
+
+      <div class="foot">2024 Project, Daragh O'Brien</div>
+    </div>
+
+  </div>
+
+</ion-content>

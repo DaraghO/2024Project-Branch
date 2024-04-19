@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-title>Hosted room</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!-- Depending on max entrants, fill up player list with bots. Start Bet button, Cancel button sends you back to home screen
+start bet will open modal, option 1 and option 2 are radio buttons with a label above saying choose winner. End bet will show 
+results screen, closing this will go back to home. Cancelling bet will give an alert "BET CANCELLED RETURNING POINTS" and send back to home -->
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-label class="textArea btnWrapper" id="description" >{{desc}} </ion-label>
+    <h3>Select a winner</h3>
+    <div class="options textarea-container">
+      <ion-button expand="block" (click)="optionSelected(1)" [class.selected]="highlighted1">{{op1}}</ion-button>
+      <div class="gap"></div>
+      <ion-button expand="block"  (click)="optionSelected(2)" [class.selected]="highlighted2">{{op2}}</ion-button>
+    </div>
+  </div>
+  
+  <div id="userStats">
+    <ul>
+      <li>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="User Icon" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label class="username"> {{max}} Entrants</ion-label> 
+          <!-- entrant amounts here  -->
+        </ion-chip>
+      </li>
+      <li>
+        <ion-chip>  
+          <ion-label class="bank">Betting Session active</ion-label> 
+          <!-- Total bet amount here -->
+        </ion-chip>
+      </li>
+    </ul>
+  </div>
+  <div id="container">
+    <ul>
+      <li>
+        <div class="btnWrapper">
+          <ion-button (click)="SubmitBet()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="stop-circle"></ion-icon> End Session
+          </ion-button>
+          <!-- <ion-button (click)="testmodal()" class="ion-activatable rounded-rectangle">
+            <ion-icon class="blueC" name="create"></ion-icon> test
+          </ion-button> -->
+          <!-- Test button used to check styling of the results screen -->
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <ion-modal  [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Results!</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="roomList">
+          <h3>{{correct}}</h3>
+          <ion-item *ngFor="let results of resultsMsg">
+            <ion-label>{{results}} </ion-label>
+          </ion-item>
+          <ion-button (click)="toHome()">Close window</ion-button>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  
+  </ion-content>
+  

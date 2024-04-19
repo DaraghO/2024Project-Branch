@@ -1,0 +1,38 @@
+    ion-content{
+        --background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #060846);
+    }
+  #x{
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+
+  .foot{
+    text-align: center;
+    margin-top: 50px;
+    color:#ffffff3d;
+  }
+
+  .form {
+    border-radius: 70px;
+    padding: 0 5vw;
+    margin-top: 70px;
+  }
+  ion-title {
+    --color: #000;
+    background-color: #119dff;
+  }
+  ion-toolbar {
+    width: auto;
+    height: auto;
+    border-radius: 9px;
+    --background: #0f8ae2;
+  }
+
+  .rounded-rectangle {
+    text-align: center;
+    border-radius: 15px;
+    background-color:#d6d8f7;
+    font-size:medium;
+    font-weight: bolder;
+  }
